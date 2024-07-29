@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/main.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/details.css" type="text/css" />
+
+</head>
+
+<body>
+    <div class="container">
+        <img src="{{.Old.Img}}" alt="">
+        <p id="name"> {{.Old.Name}}</p>
+        <p class="members">members :</p>
+        <div class="tags">
+            {{range .Old.Members}} <span> {{.}} </span>{{end}}
+        </div>
+        <p>Creation Date : <span>{{.Old.CreationDate}} </span></p>
+        <p>First Album : <span>{{.Old.FirstAlbum}} </span></p>
+        <p>Creation Date : <span>{{.Old.CreationDate}} </span></p>
+        <p>First Album : <span>{{.Old.FirstAlbum}} </span></p>
+        <p>Locations :
+        <div class="tags">
+            {{range .Loc.LocationsD}} <span> {{.}} </span>{{end}}
+        </div>
+        <p>Dates :
+
+        <div class="tags">
+            {{range .Date.DatesD}} <span> {{.}} </span>{{end}}
+        </div>
+        <p>dates Locations :
+
+        <div class="relation">
+            {{range $index, $elem:= .Relation.RelationD }} 
+            <div>
+                 {{$index}}
+
+                <select name="" id="">
+                    {{range $elem}}
+                    <option value="">{{.}}</option>
+                    {{end}}
+                </select>
+            </div>
+
+            {{end}}
+        </div>
+
+    </div>
+
+</body>
+
+</html>

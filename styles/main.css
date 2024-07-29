@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+
+:root {
+    --blue: #180161;
+    --purple: #4F1787;
+    --red: #EB3678;
+    --orange: #FB773C;
+    --radius: 50px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}

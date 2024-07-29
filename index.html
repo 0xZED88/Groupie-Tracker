@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>groupie-tracker</title>
+    <link rel="stylesheet" href="/styles/main.css" type="text/css" />
+
+    <link rel="stylesheet" href="/styles/style.css" type="text/css"/>
+
+</head>
+
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+    </nav>
+    <h1>You may also like</h1>
+    <div class="container">
+
+        {{range .}}
+        <div class="card">
+            <a href="/artists/{{.ID}}">
+                <div class="item">
+                    <img class="name" src="{{.Img}}" />
+                    <h3 class="name">{{.Name}}</h3>
+                    <?xml version="1.0" standalone="no"?>
+                    <?xml version="1.0" standalone="no"?>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,288L57.6,288L115.2,128L172.8,320L230.4,256L288,128L345.6,256L403.2,64L460.8,96L518.4,288L576,64L633.6,256L691.2,192L748.8,192L806.4,128L864,288L921.6,288L979.2,64L1036.8,288L1094.4,192L1152,96L1209.6,192L1267.2,128L1324.8,32L1382.4,288L1440,128L1440,0L1382.4,0L1324.8,0L1267.2,0L1209.6,0L1152,0L1094.4,0L1036.8,0L979.2,0L921.6,0L864,0L806.4,0L748.8,0L691.2,0L633.6,0L576,0L518.4,0L460.8,0L403.2,0L345.6,0L288,0L230.4,0L172.8,0L115.2,0L57.6,0L0,0Z"></path></svg>
+                </div>
+            </a>
+
+        </div>
+        {{end}}
+    </div>
+</body>
+
+</html>
